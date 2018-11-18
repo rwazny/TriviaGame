@@ -9,7 +9,7 @@ $(document).ready(function() {
         "Natural Hockey League"
       ],
       answer: 1,
-      photo: "./assets/images/NHLcut.jpg"
+      photo: "./assets/images/NHLcut.png"
     },
     {
       question: "Who is the All-Time leader in NHL scoring?",
