@@ -68,7 +68,7 @@ $(document).ready(function() {
     },
 
     {
-      question: "What City received an NHL last year?",
+      question: "What City received an NHL Team last year?",
       choice: ["Columbus", "Orlando", "Manitoba", "Las Vegas"],
       answer: 3,
       photo: "./assets/images/Vegas-main-pic.png"
@@ -173,18 +173,24 @@ $(document).ready(function() {
       if (userGuess === pick.answer) {
         stop();
         correctCount++;
+        //play some sound
+        document.getElementById("horn").play();
         userGuess = "";
         $("#answerblock").html("<p>Correct!</p>");
+
         hidepicture();
       } else {
         stop();
         wrongCount++;
+        //play some sound
+        document.getElementById("aww").play();
         userGuess = "";
         $("#answerblock").html(
           "<p>Wrong! The correct answer is: " +
             pick.choice[pick.answer] +
             "</p>"
         );
+
         hidepicture();
       }
     });
